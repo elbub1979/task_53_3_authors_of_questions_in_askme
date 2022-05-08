@@ -8,6 +8,8 @@ class QuestionsController < ApplicationController
 
     @question = Question.create(question_params)
 
+    # @question.author = current_user
+
     redirect_to user_path(@question.user), notice: 'Новый вопрос создан!'
   end
 
