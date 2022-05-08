@@ -1,8 +1,8 @@
 <div class="mb-sm text-dark-red">
-  <% if @user == question.author %>
-    <%= "@#{question.author.nickname}" %>
+  <% if question.user == question.author || question.author.nil? %>
+    <%= "@#{question_author(question)}" %>
   <% else %>
-    <%= link_to "@#{question.author.nickname}", user_path(question.author) %>
+    <%= link_to "@#{question_author(question)}", user_path(question.author) %>
   <% end %>
 </div>
 
