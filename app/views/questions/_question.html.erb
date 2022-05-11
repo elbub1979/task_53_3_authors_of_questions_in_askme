@@ -1,6 +1,6 @@
 <div class="mb-sm text-dark-red">
   <% if question.author %>
-    <%= link_to_unless_current(question.author.nickname, user_path(question.author.id)) %>
+    <%= link_to_unless_current(nick_name(question.author.nickname), user_path(question.author)) %>
   <% else %>
     <%= 'anonymous' %>
   <% end %>
